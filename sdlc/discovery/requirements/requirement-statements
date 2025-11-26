@@ -1,0 +1,27 @@
+1. Functional requirements
+
+   - System shall allow users to register an online DeerBank account.
+   - System shall allow users to log in and log out securely.
+   - System shall allow users to link one or more bank accounts to their online profile.
+   - System shall display a dashboard with the list of all accounts and their current balances.
+   - System shall allow users to view detailed transaction history for a selected account.
+   - System shall allow users to filter transaction history by date range and/or transaction type.
+   - System shall allow users to transfer money between their own accounts.
+   - System shall allow users to transfer money to other DeerBank customers’ accounts.
+   - System shall validate that the source account has sufficient balance before completing a transfer.
+   - System shall allow users to register and manage payees.
+   - System shall allow users to pay bills to a selected registered payee from a chosen account.
+   - System shall record each successful transfer and bill payment as a transaction in the corresponding account history.
+   - System shall store customers’ personal profile data.
+   - System shall log important events such as login attempts, transfers, and bill payments for audit purposes.
+
+2. Non-functional requirements
+   - UI shall be user-friendly.
+   - System shall be Secured
+   - System shall ensure that financial operations are executed atomically and consistently.
+   - System shall provide acceptable performance
+   - System shall be available during normal banking hours with minimal downtime.
+   - System shall be scalable
+   - System shall be maintainable
+   - System shall be cost-efficiency
+   - System shall have a good performance
