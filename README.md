@@ -40,7 +40,7 @@ This section presents the key artifacts created during the Discovery and Analysi
 ### Use Case Diagram
 
 This diagram illustrates the main functionalities of the system and how different user types (Actors) interact with them, providing an overview of the scope.
-![Use Case Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_UseCase.png)
+![Use Case Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_UseCase.png).
 
 ### User Stories
 
@@ -56,6 +56,10 @@ The Class Diagram presents the static structure of the system, showing the essen
 
 This diagram details the interaction flow and the order of messages between system objects when performing an internal transfer.
 ![Sequence Diagram - Transfer Between Own Accounts](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SequenceDiagram_TransferBetweenOwnAccounts.png)
+
+### Sequence Diagram - Schedule Recurring Payment
+This diagram illustrates the sequence of steps and interactions between different components of the system to schedule a recurring payment.
+![Sequence Diagram - Schedule Recurring Payment](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SequenceDiagram-ScheduleRecurringPayment.png)
 
 ### Sequence Diagram: Pay Bill
 
