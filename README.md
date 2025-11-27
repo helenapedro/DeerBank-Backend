@@ -40,7 +40,7 @@ This section presents the key artifacts created during the Discovery and Analysi
 ### Use Case Diagram
 
 This diagram illustrates the main functionalities of the system and how different user types (Actors) interact with them, providing an overview of the scope.
-![Use Case Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_UseCase.png).
+![Use Case Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_UseCase.png?v=1).
 
 ### User Stories
 
@@ -50,7 +50,7 @@ User Stories define the functionalities from the end-user's perspective, focusin
 ### Class Diagram
 
 The Class Diagram presents the static structure of the system, showing the essential classes (such as `Customer`, `Account`, `Transaction`, `Payee`) and the relationships between them.
-![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png)
+![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png?v=1)
 
 ### Sequence Diagram: Transfer Between Own Accounts
 
