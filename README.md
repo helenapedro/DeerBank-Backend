@@ -101,6 +101,11 @@ This diagram illustrates the internal components inside the backend container.
 
 ![DeerBank Component Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-ComponentDiagram.png)
 
+### High-Level Sequence Diagram - Pay Bill (Architecture View)
+This diagram illustrates how the whole system behaves during a key scenario ("Pay Bill").
+
+
+![DeerBank Sequence Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/SD-PayBill_ArchitectureView.png)
 
 ### Deployment Diagram
 This diagram illustrates where each part of the system runs.
