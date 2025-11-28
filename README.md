@@ -90,17 +90,22 @@ A **Background Jobs** component (Recurring Payment Scheduler) periodically trigg
 
 The backend uses a **MySQL database** hosted on Hostinger to store users, accounts, transactions, payees, and bill payments, and an **Email/Notification Service** to send confirmations and alerts to customers.
 
-### Architecture Diagram
+### Container Diagram
 
 This diagram illustrates the main layers and components of the DeerBank system, detailing the interactions between the client, backend, database, and external services.
 
-![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-ContainerDiagram.png)
+![DeerBank Container Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-ContainerDiagram.png)
+
+### Component Diagram
+This diagram illustrates the internal components inside the backend container.
+
+![DeerBank Component Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-ComponentDiagram.png)
 
 
 ### Deployment Diagram
 This diagram illustrates where each part of the system runs.
 
-![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-DeploymentDiagram.png)
+![DeerBank Deployment Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-DeploymentDiagram.png)
 
 ---
 
