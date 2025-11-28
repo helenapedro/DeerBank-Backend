@@ -52,7 +52,7 @@ User Stories define the functionalities from the end-user's perspective, focusin
 ### Class Diagram
 
 The Class Diagram presents the static structure of the system, showing the essential classes (such as `Customer`, `Account`, `Transaction`, `Payee`) and the relationships between them.
-![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png?v=3)
+![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png?v=4)
 
 ### Sequence Diagram: Transfer Between Own Accounts
 
