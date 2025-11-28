@@ -94,7 +94,7 @@ The backend uses a **MySQL database** hosted on Hostinger to store users, accoun
 
 This diagram illustrates the main layers and components of the DeerBank system, detailing the interactions between the client, backend, database, and external services.
 
-![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-Archtecture.png)
+![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-ContainerDiagram.png)
 
 
 ---
