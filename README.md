@@ -98,6 +98,8 @@ This diagram illustrates the main layers and components of the DeerBank system, 
 
 
 ### Deployment Diagram
+This diagram illustrates where each part of the system runs.
+
 ![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-DeploymentDiagram.png)
 
 ---
