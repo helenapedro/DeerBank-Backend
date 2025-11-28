@@ -33,6 +33,12 @@ DeerBank App provides a simplified and secure digital banking platform that allo
 - The System must be cost-efficient.
 - The System must perform well.
 
+
+### Software Requirements Specification (SRS)
+
+The SRS (Software Requirements Specification) document contains the formal and detailed description of all functional and non-functional requirements for the project.
+[Access Full SRS Document (PDF)](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SRS.pdf)
+
 ## 3. Artifacts (Discovery and Analysis)
 
 This section presents the key artifacts created during the Discovery and Analysis phase, detailing the structure and behavior of the DeerBank system.
@@ -68,7 +74,32 @@ This diagram illustrates the sequence of steps and interactions between differen
 This diagram illustrates the step-by-step communication between system components during the bill payment process.
 ![Sequence Diagram - Pay Bill](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SequenceDiagram-PayBill.png)
 
-### Software Requirements Specification (SRS)
+## 4. Architecture
 
-The SRS (Software Requirements Specification) document contains the formal and detailed description of all functional and non-functional requirements for the project.
-[Access Full SRS Document (PDF)](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SRS.pdf)
+The DeerBank App follows a layered architecture.
+The **Client Layer** consists of a React web application running in the browser, which communicates with the backend via HTTPS REST APIs.
+
+The **Backend Layer** is implemented as a Spring Boot application and is organized into four main layers:
+
+* an **API Layer** with REST controllers (Auth, Accounts, Payments),
+* a **Service Layer** with business services (AuthService, Account/TransferService, BillPaymentService),
+* a **Domain Layer** containing the core entities and aggregates (User, Customer, Admin, Account, Transaction, Payee, BillPayment, OneTimePayment, RecurringPayment),
+* and a **Persistence Layer** with JPA repositories that access the database.
+
+A **Background Jobs** component (Recurring Payment Scheduler) periodically triggers the `BillPaymentService` to process due recurring payments.
+
+The backend uses a **MySQL database** hosted on Hostinger to store users, accounts, transactions, payees, and bill payments, and an **Email/Notification Service** to send confirmations and alerts to customers.
+
+### Architecture Diagram
+
+This diagram illustrates the main layers and components of the DeerBank system, detailing the interactions between the client, backend, database, and external services.
+
+![DeerBank Architecture Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-Archtecture.png)
+
+
+---
+
+## Author
+
+* [Helena Pedro](https://www.linkedin.com/in/helena-software-engineer/)
+
