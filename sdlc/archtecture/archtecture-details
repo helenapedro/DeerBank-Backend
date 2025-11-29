@@ -1,15 +1,15 @@
-The DeerBank App follows a layered architecture.
-The Client Layer consists of a React web application running in the browser, which communicates with the backend via HTTPS REST APIs.
+The DeerBank App follows a clean, layered architecture.
 
-The Backend Layer is implemented as a Spring Boot application and is organized into four main layers:
+The Client Layer consists of a React web application running in the browser, which communicates with the backend through HTTPS-based REST APIs.
 
-an API Layer with REST controllers (Auth, Accounts, Payments),
+The Backend Layer is implemented as a Spring Boot application and is structured into four main layers:
 
-a Service Layer with business services (AuthService, Account/TransferService, BillPaymentService),
+     * API Layer – Contains REST controllers for authentication, account management, transfers, and bill payments.
+     * Service Layer – Implements business logic through services such as AuthService, AccountService, TransferService, and BillPaymentService.
+     * Domain Layer – Defines the core entities and aggregates, including User, Customer, Admin, Account, CheckingAccount, SavingsAccount, Transaction, Payee, BillPayment, OneTimePayment, and RecurringPayment.
+     * Persistence Layer – Provides data access through JPA repositories that interact with the database.
 
-a Domain Layer containing the core entities and aggregates (User, Customer, Admin, Account, Transaction, Payee, BillPayment, OneTimePayment, RecurringPayment),
+A Background Jobs component (Recurring Payment Scheduler) is responsible for periodically triggering the BillPaymentService to process due recurring payments.
 
-and a Persistence Layer with JPA repositories that access the database.
-
-A Background Jobs component (Recurring Payment Scheduler) periodically triggers the BillPaymentService to process due recurring payments.
-The backend uses a MySQL database hosted on Hostinger to store users, accounts, transactions, payees, and bill payments, and an Email/Notification Service to send confirmations and alerts to customers.
+For data storage, the application uses a SQL database, which stores customers, accounts, transactions, payees, and bill payment records.
+The system also integrates with an Email/Notification Service to deliver confirmations, alerts, and payment receipts to customers.
