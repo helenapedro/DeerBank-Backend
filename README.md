@@ -112,6 +112,26 @@ This diagram illustrates where each part of the system runs.
 
 ![DeerBank Deployment Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/archtecture/DeerBank-DeploymentDiagram.png)
 
+
+## 4. Artifacts (Design)
+
+### Design-level Class Diagram
+
+Design-level class diagram: domain + services + DAOs + EmailSender.
+![Class Diagram(Design)](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/design/DeerBank-ClassDiagram-Design.png)
+
+### Design-level Sequence Diagram: Transfer Between Own Accounts
+
+![Sequence Diagram(Design) - Transfer Between Own Accounts](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/design/SD_TransferBetweenOwnAccounts_Design.png)
+
+### Design-level Sequence Diagram - Schedule Recurring Payment
+
+![Sequence Diagram - Schedule Recurring Payment](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/design/SD-ScheduleRecurringPayment-Design.png)
+
+### Design-level Sequence Diagram: Pay Bill
+
+![Sequence Diagram - Pay Bill](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/design/SD-PayBill-Design.png)
+
 ---
 
 ## Author
