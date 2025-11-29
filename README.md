@@ -120,6 +120,11 @@ The DeerBank backend follows a layered architecture:
 
 ---
 
+## 6. ERD — Entity–Relationship Diagram.
+![Entity–Relationship Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/DeerBank-ERD.png)
+
+---
+
 ## Author
 
 * [Helena Pedro](https://www.linkedin.com/in/helena-software-engineer/)
