@@ -58,7 +58,7 @@ User Stories define the functionalities from the end-user's perspective, focusin
 ### Class Diagram
 
 The Class Diagram presents the static structure of the system, showing the essential classes (such as `Customer`, `Account`, `Transaction`, `Payee`) and the relationships between them.
-![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png?v=4)
+![Class Diagram](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/DeerBank_ClassDiagram.png?v=5)
 
 ### Sequence Diagram: Transfer Between Own Accounts
 
@@ -74,7 +74,7 @@ This diagram illustrates the sequence of steps and interactions between differen
 This diagram illustrates the step-by-step communication between system components during the bill payment process.
 ![Sequence Diagram - Pay Bill](https://deerbankapp-619572.s3.us-east-2.amazonaws.com/discovery/SequenceDiagram-PayBill.png)
 
-## 4. Architecture
+## 4. Artifacts (Architecture)
 
 The DeerBank App follows a layered architecture.
 The **Client Layer** consists of a React web application running in the browser, which communicates with the backend via HTTPS REST APIs.
