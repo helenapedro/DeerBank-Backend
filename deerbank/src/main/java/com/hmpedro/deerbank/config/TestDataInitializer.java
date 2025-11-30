@@ -16,10 +16,10 @@ public class TestDataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (userRepository.count() == 0) {
             User newUser = User.builder()
-                    .name("Helena Test")
-                    .email("helena.test@deerbank.com")
-                    .passwordHash("password123") // update to Bcrypt later
-                    .role(UserRole.CUSTOMER)
+                    .name("Helena Pedro")
+                    .email("hpedro.miu.edu")
+                    .passwordHash("IamanAdmin") // update to Bcrypt later
+                    .role(UserRole.ADMIN)
                     .build();
             userRepository.save(newUser);
             System.out.println("✅ Test user created in database!");
