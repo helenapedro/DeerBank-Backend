@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DeerbankApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(DeerbankApplication.class, args);
     }
 
