@@ -18,6 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
+src/main/java/com/hmpedro/deerbank/controllers/HomeController.java
+application.properties
 
 ### NetBeans ###
 /nbproject/private/
