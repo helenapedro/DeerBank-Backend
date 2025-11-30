@@ -1,6 +1,6 @@
 package com.hmpedro.deerbank.entities;
 
-import com.hmpedro.deerbank.entities.UserRole;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -35,8 +35,9 @@ public class User {
     @Column(nullable = false, length = 50)
     private UserRole role;
 
-    //@OneToMany(mappedBy = "owner")
-    //private List<Account> accounts = new ArrayList<>();
+    @JsonIgnore
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+    private List<Account> accounts = new ArrayList<>();
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
