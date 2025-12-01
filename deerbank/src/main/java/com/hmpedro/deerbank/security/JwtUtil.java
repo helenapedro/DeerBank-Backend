@@ -3,6 +3,7 @@ package com.hmpedro.deerbank.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -12,7 +13,10 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-    private String secret = "mysecretkey";
+    @Value("${jwt.secret}")
+    private String secret;
+
+    private final long expirationMs = 3600000;
 
     public String generateToken(String email, Long userId) {
         Map<String, Object> claims = new HashMap<>();
@@ -24,8 +28,8 @@ public class JwtUtil {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 3600000)) // 1 hour
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
                 .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
     }
