@@ -1,8 +1,8 @@
 package com.hmpedro.deerbank.controllers;
 
-import com.hmpedro.deerbank.dto.AuthResponse;
-import com.hmpedro.deerbank.dto.LoginRequest;
-import com.hmpedro.deerbank.dto.RegisterRequest;
+import com.hmpedro.deerbank.dto.auth.AuthResponse;
+import com.hmpedro.deerbank.dto.auth.LoginRequest;
+import com.hmpedro.deerbank.dto.auth.RegisterRequest;
 import com.hmpedro.deerbank.services.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

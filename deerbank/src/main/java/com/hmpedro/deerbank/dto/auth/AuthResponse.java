@@ -1,4 +1,4 @@
-package com.hmpedro.deerbank.dto;
+package com.hmpedro.deerbank.dto.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

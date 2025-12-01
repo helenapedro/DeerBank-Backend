@@ -1,6 +1,8 @@
 package com.hmpedro.deerbank.services;
 
-import com.hmpedro.deerbank.dto.*;
+import com.hmpedro.deerbank.dto.auth.AuthResponse;
+import com.hmpedro.deerbank.dto.auth.LoginRequest;
+import com.hmpedro.deerbank.dto.auth.RegisterRequest;
 import com.hmpedro.deerbank.entities.*;
 import com.hmpedro.deerbank.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
