@@ -4,6 +4,7 @@ import com.hmpedro.deerbank.dto.transfer.*;
 import com.hmpedro.deerbank.services.TransferService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,19 +15,25 @@ public class TransferController {
 
     @PostMapping("/own")
     public ResponseEntity<TransferResponse> transferBetweenOwnAccounts(
-            @RequestHeader("X-User-Id") Long userId,
             @RequestBody TransferBetweenOwnAccountsRequest request
     ) {
-        TransferResponse response = transferService.transferBetweenOwnAccounts(userId, request);
+        Long currentUserId = (Long) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getDetails();
+
+        TransferResponse response = transferService.transferBetweenOwnAccounts(currentUserId, request);
         return ResponseEntity.ok(response);
     }
 
     @PostMapping("/other")
     public ResponseEntity<TransferResponse> transferToOtherCustomer(
-            @RequestHeader("X-User-Id") Long userId,
             @RequestBody TransferToOtherCustomerRequest request
     ) {
-        TransferResponse response = transferService.transferToOtherCustomer(userId, request);
+        Long currentUserId = (Long) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getDetails();
+
+        TransferResponse response = transferService.transferToOtherCustomer(currentUserId, request);
         return ResponseEntity.ok(response);
     }
 }

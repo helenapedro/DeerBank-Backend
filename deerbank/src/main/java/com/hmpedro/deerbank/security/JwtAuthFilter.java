@@ -2,11 +2,13 @@ package com.hmpedro.deerbank.security;
 
 import com.hmpedro.deerbank.entities.User;
 import com.hmpedro.deerbank.repositories.UserRepository;
+import com.hmpedro.deerbank.services.MyUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -25,6 +27,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
     private final UserRepository userRepository;
+    private final MyUserDetailsService userDetailsService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
@@ -45,7 +48,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         }
 
         final String token = authHeader.substring(7);
-
         String email;
         try {
             email = jwtUtil.extractEmail(token);
@@ -55,22 +57,20 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         }
 
         if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            Optional<User> userOpt = userRepository.findByEmail(email);
-
-            if (userOpt.isPresent() && jwtUtil.validateToken(token, email)) {
-                User user = userOpt.get();
-
-                GrantedAuthority authority =
-                        new SimpleGrantedAuthority("ROLE_" + user.getRole().name());
-
+            UserDetails userDetails = userDetailsService.loadUserByUsername(email);
+            if (jwtUtil.validateToken(token, email)) {
+                Long userId = jwtUtil.extractUserId(token);
                 UsernamePasswordAuthenticationToken authToken =
                         new UsernamePasswordAuthenticationToken(
-                                user,
+                                userDetails,
                                 null,
-                                List.of(authority)
+                                userDetails.getAuthorities()
                         );
-                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-
+                authToken.setDetails(userId);
+                authToken.setDetails(userId);
+                authToken.setDetails(userId);
+                authToken.setDetails(userId);
+                authToken.setDetails(userId);
                 SecurityContextHolder.getContext().setAuthentication(authToken);
             }
         }

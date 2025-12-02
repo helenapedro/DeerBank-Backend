@@ -45,7 +45,6 @@ public class TransferService {
         Account target = accountRepository.findByAccountNumber(request.getTargetAccountNumber())
                 .orElseThrow(() -> new IllegalArgumentException("Target account not found"));
 
-        // target can be another client, thats why we dont check ownerId
         return executeTransfer(source, target, request.getAmount(), false);
     }
 
