@@ -73,7 +73,7 @@ public class TransferService {
         }
         validateAmount(request.getAmount());
     }
-    
+
     private Account findAccountOwnedByUser(String accountNumber, Long userId) {
         Account acc = accountRepository.findByAccountNumber(accountNumber)
                 .orElseThrow(() -> new IllegalArgumentException("Account not found: " + accountNumber));
